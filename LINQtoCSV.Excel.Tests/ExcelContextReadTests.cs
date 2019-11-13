@@ -4,6 +4,7 @@ using System;
 using System.IO;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 
 namespace LINQtoCSV.Excel.Tests
 {
@@ -14,13 +15,12 @@ namespace LINQtoCSV.Excel.Tests
         public void GoodFileUsingOutputFormatForParsingDatesCharUSEnglish()
         {
             // Arrange
-
             ExcelFileDescription fileDescription_namesUs = new ExcelFileDescription
             {
                 FirstLineHasColumnNames = false,
                 UseOutputFormatForParsingCsvValue = true,
                 EnforceCsvColumnAttribute = true, // default is false
-                FileCultureName = "en-US" // default is the current culture
+                FileCultureName = "en-AU" // default is the current culture
             };
 
             var expected = new[] {
