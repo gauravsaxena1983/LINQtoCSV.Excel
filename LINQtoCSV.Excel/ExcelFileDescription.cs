@@ -82,6 +82,8 @@ namespace LINQtoCSV.Excel
 
         public ExcelFileDescription()
         {
+            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+
             m_cultureInfo = CultureInfo.CurrentCulture;
             FirstLineHasColumnNames = true;
             EnforceCsvColumnAttribute = false;
